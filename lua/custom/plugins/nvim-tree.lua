@@ -1,5 +1,9 @@
 return {
   'nvim-tree/nvim-tree.lua',
+  version = '*',
+  dependencies = {
+    'nvim-tree/nvim-web-devicons',
+  },
   config = function()
     require('nvim-tree').setup {
       filters = {
@@ -7,6 +11,6 @@ return {
       },
     }
 
-    vim.keymap.set('n', '<leader>tt', ':NvimTreeFocus', { desc = 'Open Nvim Tree' })
+    vim.keymap.set('n', '<leader>tt', ':NvimTreeFocus<cr>', { desc = 'Open Nvim Tree' })
   end,
 }
